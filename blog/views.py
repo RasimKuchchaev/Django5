@@ -3,40 +3,14 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Главная страница")
+    return HttpResponse("<h2>Главная</h2>")
 
-def products(request, id):
-    return HttpResponse(f"Товар {id}")
+# def user(request):
+#     age = request.GET.get("age")
+#     name = request.GET.get("name")
+#     return HttpResponse(F"<h2>Name: {name} Age: {age}</h2>")
 
-def comments(request, id):
-    return HttpResponse(f"Комментарии о товаре {id}")
-
-def questions(request, id):
-    return HttpResponse(f"Вопросы о товаре {id}")
-
-def new(request):
-    return HttpResponse("Новые товары")
-
-def top(request):
-    return HttpResponse("Наиболее популярные товары")
-
-def about(request, name, age):
-    return HttpResponse(f"""<h2>О сайте</h2>
-                        <p>Имя: {name}</p>
-                        <p>Возраст: {age}</p>""")
-
-def contact(request):
-    return HttpResponse("<h1>Контакты</h1>")
-
-def user(request, name='Undefined', age=0):
-    return HttpResponse(f'<h1>Name: {name} <br> Age: {age}</h1>')
-
-def message(request, category, subcategory, theme, number):
-    return HttpResponse(f'''<h2>Сообщение</h2> 
-                        <ul>
-                            <li>category: {category}</li>
-                            <li>subcategory: {subcategory}</li>
-                            <li>theme: {theme}</li>
-                            <li>number: {number}</li>
-                        </ul>
-''')
+def user(request):
+    age = request.GET.get("age", 0)
+    name = request.GET.get("name", "Undefined")
+    return HttpResponse(F"<h2>Name: {name} Age: {age}</h2>")
