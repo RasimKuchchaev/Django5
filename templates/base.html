@@ -9,6 +9,11 @@
     <div><a href='/'>Home</a>|<a href='/about'>About</a></div>
     <h1>{% block header %}{% endblock header %}</h1>
     <div>{% block content %}{% endblock content %}</div>
+
+    {# {% include "blog/banner.html" %} #}
+
+    {% include "blog/banner.html" with tutorial="Lesson Django" site="Azbuka.rr" %}
+
     <div>MyCorp. 2023. All rights reserved.</div>
 </body>
 </html>
