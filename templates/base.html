@@ -12,7 +12,10 @@
 
     {# {% include "blog/banner.html" %} #}
 
-    {% include "blog/banner.html" with tutorial="Lesson Django" site="Azbuka.rr" %}
+    {% include "blog/banner.html" with tutorial="Django" %}
+
+    {# запрет передачу данных из родительского во вложенный шаблон, используя оператор only #}
+    {# {% include "blog/banner.html" with tutorial="Django" only %} #}
 
     <div>MyCorp. 2023. All rights reserved.</div>
 </body>
