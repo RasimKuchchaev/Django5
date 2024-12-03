@@ -17,6 +17,12 @@
         {% endfor %}
     </ol>
 
+    {% if tmpl_name %}
+        {% include tmpl_name %}
+    {% else %}
+        {% include 'main_app/default_employees.html' %}
+    {% endif %}
+
 
 
 </body>

@@ -13,7 +13,7 @@ def index(request):
                 {'name': 'Евгений', 'experience': 4},
                 {'name': 'Андрей',  'experience': 2},
                 {'name': 'Николай', 'experience': 8}]
-    return render(request,"main_app/index.html", context={'user_list':user_list})
+    return render(request,"main_app/index.html", context={'user_list':user_list, 'tmpl_name':'main_app/employees_list.html'})
 
 def contact(request):
     data= 'Телефон: +79123456789, E-Mail: admin@email.com'
