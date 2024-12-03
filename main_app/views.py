@@ -3,7 +3,8 @@ from django.shortcuts import  render
 
 
 def index(request):
-    return TemplateResponse(request,"main_app/index.html")
+    profile_data=['Павел', 45, '+79234567891', 'pavel@pavel.com']
+    return render(request,"main_app/index.html", context={'profile_data':profile_data})
 
 def contact(request):
     data= 'Телефон: +79123456789, E-Mail: admin@email.com'
