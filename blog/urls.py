@@ -1,9 +1,8 @@
-from django.urls import path, include
+from django.urls import path
 from blog import views
-from django.views.generic import TemplateView
 
 
 
-urlpatterns = [path("", views.index),  
-               path("about/", views.about),          
+urlpatterns = [path("", views.index, name="home"),  
+               path("about/", views.about, name="about"),          
              ]
